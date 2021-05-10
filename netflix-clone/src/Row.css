@@ -20,6 +20,7 @@
     max-height: 100px;
     transition:transform 450ms;
     margin-right: 10px;
+    max-height: 200px ;
 
 }
 
@@ -34,4 +35,8 @@
 
 .row__posterLarge:hover{
     transform: scale(1.09);
+}
+
+.row__title:hover{
+    color:red
 }
