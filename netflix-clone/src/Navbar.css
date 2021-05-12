@@ -3,7 +3,7 @@
     top:0;
     display:flex;
     padding:20px;
-    height:30px;
+    height:20px;
     width:100%;
     justify-content:space-evenly;
     
@@ -11,8 +11,11 @@
     transition-timing-function: ease-in;
     transition: all 0.5s;
     background-color: black;
+
     opacity: 0.8;
-    align-items: center
+    align-items: center;
+    opacity: 0.5;
+
 }
 .nav__black{
     background-color: black;
