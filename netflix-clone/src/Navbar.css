@@ -5,16 +5,44 @@
     padding:20px;
     height:20px;
     width:100%;
-    justify-content:space-between;
+    justify-content:space-evenly;
     
     z-index: 1;
     transition-timing-function: ease-in;
     transition: all 0.5s;
     background-color: black;
+
+    opacity: 0.8;
+    align-items: center;
     opacity: 0.5;
+
 }
 .nav__black{
     background-color: black;
+}
+.nav__button{
+     cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding-bottom: 0.5rem;
+  
+}
+button > a{
+    text-decoration: none;
+    color: white;
+}
+.nav__button:hover{
+    color: #000;
+  background-color: black;
+  transition: all 0.2s;
 }
 .nav__logo{
     position:fixed;
@@ -22,7 +50,18 @@
     width: 80px;
     object-fit: contain;
 }
-
+.nav__search{
+    position:fixed;
+    right:120px;
+}
+.nav__watched{
+    position: fixed;
+    left:120px
+}
+.nav__watchlist{
+    position: fixed;
+    left: 250px;
+}
 .nav__avatar{
     position: fixed;
     right: 20px;
