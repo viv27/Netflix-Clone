@@ -14,7 +14,7 @@
 
     opacity: 0.8;
     align-items: center;
-    opacity: 0.5;
+    opacity: 0.8;
 
 }
 .nav__black{
@@ -31,17 +31,17 @@
   padding-right: 2rem;
   margin-right: 1rem;
   padding-top: 0.5rem;
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: red;
   padding-bottom: 0.5rem;
   
 }
 button > a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 .nav__button:hover{
-    color: #000;
-  background-color: black;
+    color: black;
+  background-color: white;
   transition: all 0.2s;
 }
 .nav__logo{

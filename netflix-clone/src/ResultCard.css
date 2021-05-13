@@ -2,7 +2,15 @@
     margin: 15px;
     transition:transform 450ms;
     
+    
 }
 .result-card:hover{
     transform:scale(1.08);
+}
+.poster__item > button{
+    display:block
+}
+.poster__item:{
+    display:flex;
+    flex-direction:column;
 }
