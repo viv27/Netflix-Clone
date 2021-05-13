@@ -2,21 +2,30 @@ import React,{ useState,useEffect } from 'react'
 import './ResultCard.css'
 import Youtube from 'react-youtube'
 import axios from './axios'
+import Modal from './Modal'
 function ResultCard({movie}) {
 
     const [trailerUrl, setTrailerUrl] = useState("")
-    
+    const [modal, openModal] = useState(false)
+
+    const modalOpen =()=>{
+        openModal(prev => !prev)
+    }
 
    
     return (
         <div className="result-card">
             <div className="poster-wrapper">
                 {movie.poster_path ? (
-                    <img  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`} />
+                    <div className="poster__item">
+                    <img onClick={modalOpen}  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`} />
+                    <button>Watch Trailer</button>
+                    </div>
                 ):(
                    <div></div> 
                 ) }
             </div>
+            
             
         </div>
     )

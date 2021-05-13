@@ -1,0 +1,25 @@
+.watched__list{
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.watched__header{
+    margin-top:100px;
+    font-weight: bold;
+    font-size:larger;
+    display: flex;
+    justify-content:center
+    
+}
+.watched__list__poster{
+    margin: 10px;
+    
+}
+
+.watched__list__poster > p{
+    display: flex;
+    font-size:13px;
+    font-weight: bold;
+    justify-content:center
+}

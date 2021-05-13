@@ -4,6 +4,7 @@ import './Search.css'
 import TextField from '@material-ui/core/TextField';
 import Navbar from './Navbar'
 import ResultCard from './ResultCard'
+import {ThemeContextConsumer} from './Context'
 
 import {useState} from 'react'
 
@@ -27,6 +28,17 @@ function Search() {
             }
         })
     }
+    const handleLike=(movie)=>{
+        <>
+        {console.log("Movie: ",movie.title)}
+        <ThemeContextConsumer>
+            {context=>{
+                context.addTheme()
+            }}
+        </ThemeContextConsumer>
+        </>
+
+    }
     return (
         
         <div className="search">
@@ -44,9 +56,21 @@ function Search() {
              {results.length > 0 && (
                 <ul className="results">
                     {results.map(movie=>(
-                        <li key ={movie.id}>
-                            <ResultCard movie ={movie}/>
-                        </li>
+                        <div className="results__poster">
+                        <img  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`} />
+                        <div className="results__poster__button">
+                        
+                         <ThemeContextConsumer>
+                             {context =>(
+                              <button onClick={()=> context.addTheme(movie)}>Like</button>
+                             )}
+                        
+                        </ThemeContextConsumer>   
+                        <button>Trailer</button>
+                        <button>Watched</button>
+                        </div>
+                        </div>
+                   
                     ))}
                 </ul>
             )} 
