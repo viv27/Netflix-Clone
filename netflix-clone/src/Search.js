@@ -6,12 +6,22 @@ import Navbar from './Navbar'
 import ResultCard from './ResultCard'
 import {ThemeContextConsumer} from './Context'
 
+
+import ReactDOM from 'react-dom'
+
+
 import {useState} from 'react'
 
 function Search() {
+    const styles = theme => ({
+    multilineColor:{
+        color:'red'
+    }
+});
 
     const [query,setQuery] = useState("")
     const [results,setResults] = useState([])
+    const [isOpen, setOpen] = useState(false)
 
     const onChange = (e)=>{
         e.preventDefault()
@@ -49,33 +59,47 @@ function Search() {
             
             <div className="search__input">
             
-            <TextField className="search__input__box" onChange={onChange} value={query} color="secondary" id="outlined-basic" label="Search for movies....." variant="outlined" />
+            <TextField className="search__input__box" onChange={onChange} value={query} color="secondary" id="outlined-basic" label="Search for movies....." variant="outlined" InputProps={{
+        style: {
+            color: "red",
+            backgroundColor: "white",
+            margin: "10px"
+            
+        }
+    
+  }} InputLabelProps={{style:{color:"black",fontSize:"20px",padding:"3px"}}}/>
             
             </div>
             <div className="search__results">
              {results.length > 0 && (
                 <ul className="results">
                     {results.map(movie=>(
+                        
                         <div className="results__poster">
-                        <img  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`} />
+                         <img  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`}/>
                         <div className="results__poster__button">
                         
                          <ThemeContextConsumer>
                              {context =>(
-                              <button onClick={()=> context.addTheme(movie)}>Like</button>
+                                <>
+                              <button onClick={()=> context.addTheme(movie)}>Favourite</button>
+                              <button onClick={()=> context.addWatched(movie)}>Add+</button>
+                              </>
                              )}
                         
                         </ThemeContextConsumer>   
+                        
                         <button>Trailer</button>
-                        <button>Watched</button>
                         </div>
                         </div>
+                             
                    
                     ))}
                 </ul>
             )} 
             </div>
-             
+           
+            
 
         </div>
     )

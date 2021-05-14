@@ -7,7 +7,9 @@ import Navbar from './Navbar'
 import Main from './Main'
 import Watched from './Watched'
 import Search from './Search'
+import Watchlist from './Watchlist'
 import {BrowserRouter as Router,Link,Switch,Route} from 'react-router-dom'
+
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
         <Route exact path="/"><Main/></Route>
         <Route  path="/watched"><Watched/></Route>
         <Route  path="/search"><Search/></Route>
+        <Route path ="/watchlist"><Watchlist/></Route>
 
       </Switch>
 

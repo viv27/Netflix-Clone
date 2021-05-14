@@ -3,11 +3,11 @@ import Navbar from './Navbar'
 import {ThemeContextConsumer} from './Context'
 import './Watched.css'
 
-function Watched() {
+function Watchlist() {
 
-    const [watched,setWatched] = useState([])
-    const [final, setFinal] = useState([])
-    console.log("WATCHEDDDDDD: ",watched)
+    const [watchlist,setWatchlist] = useState([])
+    
+    
     
     
 
@@ -15,13 +15,13 @@ function Watched() {
         <>
         <ThemeContextConsumer>
             {context=>{
-                setWatched(context.watched)
+                setWatchlist(context.watchlist)
             }}
         
         </ThemeContextConsumer>
-        <p className="watched__header">My Favourite Movies</p>
+        <p className="watched__header">Movies Watched</p>
         <div className="watched__list">
-        {watched.length > 0 && watched.map(movie=>{
+        {watchlist.length > 0 && watchlist.map(movie=>{
             {console.log("FINAL :",movie.title)}
             
              return <div className="watched__list__poster">
@@ -42,4 +42,4 @@ function Watched() {
     )
 }
 
-export default Watched
+export default Watchlist

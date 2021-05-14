@@ -9,7 +9,8 @@ const {Provider,Consumer} = React.createContext();
     
     class ThemeContextProvider extends Component{
         state ={
-            watched:[]
+            watched:[],
+            watchlist:[]
         }
 
         addTheme = (title)=>{
@@ -20,10 +21,18 @@ const {Provider,Consumer} = React.createContext();
                 }
             })
         }
+        addWatched = (title)=>{
+            console.log("TITLE: ",title)
+            this.setState(prevState=>{
+                return{
+                    watchlist:[...prevState.watched,title]
+                }
+            })
+        }
     
         render(){
         return(
-                <Provider value ={{watched : this.state.watched,addTheme: this.addTheme}}>
+                <Provider value ={{watched : this.state.watched,addTheme: this.addTheme,watchlist:this.state.watchlist,addWatched: this.addWatched}}>
                     {this.props.children}
                     {console.log("WATCHED: ",this.state.watched)}
                 </Provider>
