@@ -21,7 +21,7 @@ function Watched() {
         </ThemeContextConsumer>
         <p className="watched__header">My Favourite Movies</p>
         <div className="watched__list">
-        {watched.length > 0 && watched.map(movie=>{
+        {watched.length == 0 ? <h1 className="watched__none">No favourite movies added</h1> : watched.length > 0 && watched.map(movie=>{
             {console.log("FINAL :",movie.title)}
             
              return <div className="watched__list__poster">
