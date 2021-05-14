@@ -25,7 +25,7 @@ const {Provider,Consumer} = React.createContext();
             console.log("TITLE: ",title)
             this.setState(prevState=>{
                 return{
-                    watchlist:[...prevState.watched,title]
+                    watchlist:[...prevState.watchlist,title]
                 }
             })
         }

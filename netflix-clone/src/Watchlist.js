@@ -21,7 +21,7 @@ function Watchlist() {
         </ThemeContextConsumer>
         <p className="watched__header">Movies Watched</p>
         <div className="watched__list">
-        {watchlist.length > 0 && watchlist.map(movie=>{
+        {watchlist.length == 0 ? <h1 className="watched__none">No Movies Watched</h1> :watchlist.length > 0 && watchlist.map(movie=>{
             {console.log("FINAL :",movie.title)}
             
              return <div className="watched__list__poster">

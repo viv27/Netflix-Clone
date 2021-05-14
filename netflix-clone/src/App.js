@@ -13,21 +13,7 @@ import {BrowserRouter as Router,Link,Switch,Route} from 'react-router-dom'
 
 function App() {
   return (
-    // <div className="app">
-    //   <Router>
-    //   <Navbar/>
-    //   <Banner />
-
-    //   <Row isLargeRow title="NETFLIX ORIGINALS" fetchURL ={requests.fetchNetflixOriginals}/>
-    //   <Row title="Trending Now" fetchURL ={requests.fetchTrending}/>
-    //   <Row title="Action Movies" fetchURL={requests.fetchActionMovies} />
-    //   <Row title="Comedy Movies" fetchURL={requests.fetchComedyMovies} />
-    //   <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
-    //   <Row title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
-    //   <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
-    //   </Router>
-
-    // </div>
+   
     
     
     <Router>

@@ -1,8 +1,6 @@
 import React,{ useState,useEffect } from 'react'
 import './ResultCard.css'
-import Youtube from 'react-youtube'
-import axios from './axios'
-import Modal from './Modal'
+
 function ResultCard({movie}) {
 
     const [trailerUrl, setTrailerUrl] = useState("")

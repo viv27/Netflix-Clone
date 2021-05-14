@@ -30,17 +30,6 @@ function Row({title,fetchURL,isLargeRow}) {
             autoplay:1
         },
     }
-    // const handleClick = (movie)=>{
-    //     if(trailerUrl){
-    //         setTrailerUrl('')
-    //     }else{
-    //         movieTrailer(movie?.name || "")
-    //         .then(url=>{
-    //             const urlParams = new URLSearchParams( URL(url).search)
-    //             setTrailerUrl(urlParams.get('v'))
-    //         }).catch(error=> console.error(error))
-    //     }
-    // }
     const handleClick = async (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
@@ -61,6 +50,7 @@ function Row({title,fetchURL,isLargeRow}) {
                 ))}
             </div>
             {trailerUrl && <Youtube videoId={trailerUrl} opts ={opts}/>}
+            {console.log("TRAILER URL :",trailerUrl)}
         </div>
     )
 }

@@ -25,3 +25,7 @@
     justify-content:center;
     color:white
 }
+.watched__none{
+    margin-top:150px;
+    color: red
+}

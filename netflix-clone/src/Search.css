@@ -61,7 +61,8 @@ poster__item__button{
 }
 .results__poster{
     display: flex;flex-direction: column;
-    margin:10px
+    margin:10px;
+    background-color: black;
 }
 .results__poster__button{
     display: flex;
@@ -76,6 +77,7 @@ poster__item__button{
     border-radius:5px;
     margin-top:10px;
     cursor:pointer;
+    margin-bottom: 5px;
 }
 .results__poster__button > button:hover{
     background-color:white;

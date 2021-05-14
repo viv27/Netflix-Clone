@@ -12,7 +12,7 @@
     transition: all 0.5s;
     background-color: black;
 
-    opacity: 0.8;
+    opacity: 1;
     align-items: center;
     opacity: 0.8;
 
@@ -47,8 +47,9 @@ button > a{
 .nav__logo{
     position:fixed;
     left:20px;
-    width: 80px;
+    width: 120px;
     object-fit: contain;
+    
 }
 .nav__search{
     position:fixed;
@@ -68,3 +69,8 @@ button > a{
     width: 30px;
     object-fit: contain;
 }
+.nav__link{
+    color: #fff;
+
+}
+.nav__link:visited{ color: #fff; }
