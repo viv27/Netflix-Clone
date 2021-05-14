@@ -37,7 +37,7 @@ function Navbar() {
         alt="Avatar"
       />  */}
             <button className="nav__button"><Link to ="/">Home</Link></button>
-            <button className="nav__button"><Link to ="/watched">Watched</Link></button>
+            <button className="nav__button"><Link to ="/watched">My Favourites</Link></button>
             <button className="nav__button"><Link to ="/search">Search</Link></button>
             <button className="nav__button"><Link to ="/watchlist">Watchlist</Link></button>
             
